@@ -1,7 +1,7 @@
 # Личный проект «Седона» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Тимур Мирхайдаров](https://up.htmlacademy.ru/adaptive/19/user/796097).
-* Наставник: `Неизвестно`.
+* Наставник: [Алёна Сиприкова](https://htmlacademy.ru/profile/asiprikova).
 
 ---
 
