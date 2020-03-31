@@ -34,43 +34,65 @@
     </header>
     <main class="main">
         <section class="gallery">
-            <div class="gallery__header">
-                <h2 class="gallery__title">Фото и видео</h2>
-            </div>
+            <h2 class="gallery__title">Фото и видео</h2>
             <p class="gallery__intro">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.</p>
             <div class="gallery__wrap">
                 <article class="gallery__item">
-                    <div class="gallery__item-img-wrap">
+                    <a class="gallery__item-img-wrap">
                         <img src="https://via.placeholder.com/280x280" alt="Фотография: Неродные просторы">
-                    </div>
+                    </a>
                     <h3 class="gallery__item-title">Неродные просторы</h3>
                     <p class="gallery_text">Автор фото: Борис</p>
                     <p class="gallery-like">1350</p>
                 </article>
                 <article class="gallery__item">
-                    <div class="gallery__item-img-wrap">
+                    <a class="gallery__item-img-wrap">
                         <img src="https://via.placeholder.com/280x280" alt="Фотография: Местная растительность">
-                    </div>
+                    </a>
                     <h3 class="gallery__item-title">Местная растительность</h3>
                     <p class="gallery_text">Автор фото: Сергей</p>
                     <p class="gallery-like">143</p>
                 </article>
                 <article class="gallery__item">
-                    <div class="gallery__item-img-wrap">
+                    <a class="gallery__item-img-wrap">
                         <img src="https://via.placeholder.com/280x280" alt="Фотография: Дорога на север">
-                    </div>
+                    </a>
                     <h3 class="gallery__item-title">Дорога на север</h3>
                     <p class="gallery_text">Автор фото: Петр</p>
                     <p class="gallery-like">96</p>
                 </article>
                 <article class="gallery__item">
                     <div class="gallery__item-img-wrap">
-                        <img src="https://via.placeholder.com/280x280" alt="Фотография: Мост дьявола">
+                        <a href="#">
+                            <img src="https://via.placeholder.com/280x280" alt="Фотография: Мост дьявола">
+                        </a>
                     </div>
                     <h3 class="gallery__item-title">Мост дьявола</h3>
                     <p class="gallery_text">Автор фото: Антон</p>
                     <p class="gallery-like">254</p>
                 </article>
+            </div>
+            <div class="video">
+                <h2 class="video__title">Все еще сомневаетесь?</h2>
+                <p class="video_text">Все еще сомневаетесь? Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
+                <div class="video__screen">
+                    <!--тут будет само видео-->
+                </div>
+                <div class="video__controls">
+                    <div class="video__track">
+                        <div class="video__track-scale">
+                            <!--дорожка для перемотки-->
+                        </div>
+                    </div>
+                    <div class="video_toggle">
+                        <!--ползунок для перемотки-->
+                    </div>
+                    <div class="video__controls-buttons">
+                        <button type="button" class="video__button video__button--replay">Воспроизвести с начала</button>
+                        <button type="button" class="video__button video__button--subtitles">Субтитры</button>
+                        <button type="button" class="video__button video__button--expand">Развернуть на весь экран</button>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
@@ -92,5 +114,6 @@
         <p class="made-by">Разработано</p>
     </footer>
 </body>
+
 
 </html>
