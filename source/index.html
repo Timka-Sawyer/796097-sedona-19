@@ -3,32 +3,35 @@
 
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./css/style.css">
     <title>HTML Academy: Седона</title>
 </head>
 
 <body>
     <header class="header">
         <nav class="main-nav">
-            <ul class="main-nav_list site-list">
-                <li class="site-list__item">
-                    <a>Главная</a>
+            <ul class="main-nav__list">
+                <li class="main-nav__item">
+                    <a class="main-nav__link">Главная</a>
                 </li>
-                <li class="site-list__item">
-                    <a href="./photo.html">Фото и видео</a>
+                <li class="main-nav__item">
+                    <a class="main-nav__link" href="./photo.html">Фото и видео</a>
                 </li>
-                <li class="site-list__item">
-                    <a href="./form.html">Форма отзыва</a>
+                <li class="main-nav__item">
+                    <a class="main-nav__link" href="./form.html">Форма отзыва</a>
                 </li>
-                <li class="site-list__item">
-                    <a href="https://htmlacademy.ru">HTML Academy</a>
+                <li class="main-nav__item">
+                    <a class="main-nav__link" href="https://htmlacademy.ru">HTML Academy</a>
                 </li>
             </ul>
-            <a class="header__logo" href="">
-                <img src="https://via.placeholder.com/102x83" alt="Седона логотип">
+            <a class="header__logo" href="./index.html">
+                <img src="./img/logo-sedona-mobile.svg" width="102" height="83" alt="Седона логотип">
             </a>
             <button class="main-nav__toggle" type="button">Открыть меню</button>
         </nav>
         <div class="header__intro header__intro--main">
+            <img src="./img/text-sedona-index.svg" width="281" height="214" alt="Изображение Welcome">
             <!--Картинка с надписью Sedona на фоне картинки с горами-->
         </div>
     </header>
@@ -41,12 +44,12 @@
             <p class="benefits__intro">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
             <ol class="benefits__wrapper-list">
                 <li>
-                    <div class="benefits__item">
+                    <div class="benefits__item benefits__item--brand-color">
                         <h2 class="benefits__item-title">Настоящий городок</h2>
                         <p class="benefits__number">-№1-</p>
                         <p class="benefits__description">Седона не атракцион для туристов, там течет своя жизнь</p>
                         <div class="benefits__image-wrap">
-                            <img class="benefits__image" src="https://via.placeholder.com/320x260" alt="Изображение жилья">
+                            <img class="benefits__image" src="./img/main-city-mobile@1x.jpg" width="320" height="260" alt="Изображение жилья">
                         </div>
                     </div>
                 </li>
@@ -76,34 +79,34 @@
                     </ul>
                 </li>
                 <li>
-                    <div class="benefits__item">
+                    <div class="benefits__item benefits__item--brand-color">
                         <h2 class="benefits__item-title">Там есть мост дьявола</h2>
                         <p class="benefits__number">-№2-</p>
                         <p class="benefits__description">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
                         <div class="benefits__image-wrap">
-                            <img class="benefits__image" src="https://via.placeholder.com/320x260" alt="Изображение жилья">
+                            <img class="benefits__image" src="./img/main-bridge-mobile@1x.jpg" width="320" height="260" alt="Изображение жилья">
                         </div>
                     </div>
                 </li>
                 <li>
                     <div class="benefits__item benefits__item--other">
-                        <h2 class="benefits__item-title">Небольшая площадь</h2>
-                        <p class="benefits__number">-№3-</p>
-                        <p class="benefits__description">Все интересные места находятся очень близко</p>
+                        <h2 class="benefits__item-title benefits__item-title--other">Небольшая площадь</h2>
+                        <p class="benefits__number benefits__number--other">-№3-</p>
+                        <p class="benefits__description benefits__description--other">Все интересные места находятся очень близко</p>
                     </div>
                 </li>
                 <li>
                     <div class="benefits__item benefits__item--other">
-                        <h2 class="benefits__item-title">Красивая дорога</h2>
-                        <p class="benefits__number">-№4-</p>
-                        <p class="benefits__description">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+                        <h2 class="benefits__item-title benefits__item-title--other">Красивая дорога</h2>
+                        <p class="benefits__number benefits__number--other">-№4-</p>
+                        <p class="benefits__description benefits__description--other">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
                     </div>
                 </li>
                 <li>
                     <div class="benefits__item benefits__item--other">
-                        <h2 class="benefits__item-title">Мало туристов</h2>
-                        <p class="benefits__number">-№5-</p>
-                        <p class="benefits__description">Большинство едет в Гранд Каньон и толпится там</p>
+                        <h2 class="benefits__item-title benefits__item-title--other">Мало туристов</h2>
+                        <p class="benefits__number benefits__number--other">-№5-</p>
+                        <p class="benefits__description benefits__description--other">Большинство едет в Гранд Каньон и толпится там</p>
                     </div>
                 </li>
             </ol>
@@ -114,7 +117,9 @@
                 <p class="booking__description"> Укажите предлагаемые даты поездки и мы покажем вам лучшие предложения гостиниц в Седоне</p>
                 <a class="button button--booking" href="">Найти гостиницу</a>
             </div>
-            <div class="booking__map-wrap"></div>
+            <div class="booking__map-wrap">
+                <img src="./img/bg-map-mobile@1x.jpg" width="320" height="350" alt="Карта">
+            </div>
         </section>
     </main>
     <footer class="footer">
@@ -132,7 +137,7 @@
                 </li>
             </ul>
         </div>
-        <p class="made-by">Разработано</p>
+        <p class="footer__made-by">Разработано</p>
     </footer>
 </body>
 
