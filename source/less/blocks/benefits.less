@@ -5,6 +5,8 @@
 .benefits__wrapper-list {
   padding: 0;
   list-style: none;
+
+  counter-reset: benefit;
 }
 
 .benefits__title {
@@ -37,9 +39,12 @@
   color: @light-color;
 }
 
-.benefits__number {
-  .text-mixin();
-  color: @light-color;
+.benefits__item-title::after {
+  display: block;
+  counter-increment: benefit;
+  content: "— №" counter(benefit) " —";
+  font-weight: 400;
+  font-size: 0.8em;
 }
 
 .benefits__description {
@@ -126,10 +131,6 @@
 
 .benefits__item-title--other {
   color: @title-color;
-}
-
-.benefits__number--other {
-  color: @text-color;
 }
 
 .benefits__description--other {

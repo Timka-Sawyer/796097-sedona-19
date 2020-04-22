@@ -1,15 +1,15 @@
 .main-nav {
+  display: flex;
+  flex-direction: column;
   min-height: 220px;
-}
 
-@media (min-width: @tablet-width) {
-  .main-nav {
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
     min-height: 56px;
   }
-}
 
-@media (min-width: @desktop-width) {
-  .main-nav {
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
     min-height: 56px;
   }
 }
@@ -21,16 +21,26 @@
   padding: 0;
   margin: 0;
   list-style: none;
-}
 
-@media (min-width: @tablet-width) {
-  .main-nav__list {
+  @media (min-width: @tablet-width) {
+    order: -1;
+    flex-direction: row;
+  }
+
+  @media (min-width: @desktop-width) {
+    order: -1;
     flex-direction: row;
   }
 }
 
-@media (min-width: @desktop-width) {
-  .main-nav__list {
+.main-nav__list--right {
+  @media (min-width: @tablet-width) {
+    order: 1;
+    flex-direction: row;
+  }
+
+  @media (min-width: @desktop-width) {
+    order: 1;
     flex-direction: row;
   }
 }
@@ -38,74 +48,18 @@
 .main-nav__item {
   border-top: 1px solid #9ac2db;
   border-bottom: 1px solid #678fa8;
-}
 
-@media (min-width: @tablet-width) {
-  .main-nav__item {
+  @media (min-width: @tablet-width) {
     border: none;
   }
-}
 
-@media (min-width: @desktop-width) {
-  .main-nav__item {
+  @media (min-width: @desktop-width) {
     border: none;
   }
 }
 
 .main-nav__item.main-nav__item--logo {
   border: none;
-}
-
-.main-nav__item:nth-child(1) {
-  order: 1;
-}
-
-.main-nav__item:nth-child(2) {
-  order: 2;
-}
-
-.main-nav__item:nth-child(3) {
-  order: 3;
-}
-
-.main-nav__item:nth-child(4) {
-  order: 4;
-}
-
-.main-nav__item:nth-child(5) {
-  order: 5;
-}
-
-@media (min-width: @tablet-width) {
-  .main-nav__item:nth-child(3) {
-    order: 4;
-  }
-
-  .main-nav__item:nth-child(4) {
-    order: 5;
-  }
-
-  .main-nav__item:nth-child(5) {
-    order: 3;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .main-nav__item:nth-child(3) {
-    order: 4;
-  }
-
-  .main-nav__item:nth-child(4) {
-    order: 5;
-  }
-
-  .main-nav__item:nth-child(5) {
-    order: 3;
-  }
-}
-
-.main-nav__item:last-child .main-nav__link {
-  box-shadow: @box-shadow;
 }
 
 .main-nav__link {
@@ -117,4 +71,14 @@
   text-transform: uppercase;
   background-color: @brand-color;
   color: @light-color;
+  text-decoration: none;
+
+  @media (min-width: @tablet-width) {
+    color: @title-color;
+    background-color: #ffffff;
+  }
+
+  @media (min-width: @desktop-width) {
+    color: @title-color;
+  }
 }
