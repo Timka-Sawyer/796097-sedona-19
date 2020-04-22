@@ -5,59 +5,132 @@
 .benefits__wrapper-list {
   padding: 0;
   list-style: none;
+
+  counter-reset: benefit;
 }
 
 .benefits__title {
-  .title-mixin;
+  .title-mixin();
 }
 
 .benefits__intro {
-  .text-mixin;
+  .text-mixin();
+}
+
+.benefits__item {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: @tablet-width) {
+  .benefits__item {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .benefits__item {
+    flex-direction: row;
+  }
 }
 
 .benefits__item-title {
-  .title-mixin;
+  .title-mixin();
   color: @light-color;
 }
 
-.benefits__number {
-  .text-mixin;
-  color: @light-color;
+.benefits__item-title::after {
+  display: block;
+  counter-increment: benefit;
+  content: "— №" counter(benefit) " —";
+  font-weight: 400;
+  font-size: 0.8em;
 }
 
 .benefits__description {
-  .text-mixin;
+  .text-mixin();
   color: @light-color;
 }
 
 .benefits__featyres-list {
+  display: flex;
+  flex-direction: column;
   padding: 0;
   list-style: none;
 }
 
+@media (min-width: @tablet-width) {
+  .benefits__featyres-list {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .benefits__featyres-list {
+    flex-direction: row;
+  }
+}
+
 .benefits__featyres-title {
-  .title-mixin;
+  .title-mixin();
 }
 
 .benefits__featyres-description {
-  .text-mixin;
+  .text-mixin();
 }
 
 .benefits__item--brand-color {
   background-color: @brand-color;
 }
 
-.benefits__item--other {
+.benefits__item--brand-color-rev {
+  background-color: @brand-color;
+}
+
+@media (min-width: @tablet-width) {
+  .benefits__item--brand-color-rev {
+    flex-direction: row-reverse;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .benefits__item--brand-color-rev {
+    flex-direction: row-reverse;
+  }
+}
+
+.benefits-other__list {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 0;
+}
+
+@media (min-width: @tablet-width) {
+  .benefits-other__list {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    padding: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .benefits-other__list {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    padding: 0;
+  }
+}
+
+.benefits-other__item {
   background-color: #ededed;
   color: @text-color;
 }
 
 .benefits__item-title--other {
   color: @title-color;
-}
-
-.benefits__number--other {
-  color: @text-color;
 }
 
 .benefits__description--other {

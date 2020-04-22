@@ -1,14 +1,29 @@
 .gallery__title {
-  .title-mixin;
+  .title-mixin();
 }
 
 .gallery__intro {
-  .text-mixin;
+  .text-mixin();
   line-height: @text-mlh;
 }
 
+.gallery__wrap {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
 .gallery__item-title {
-  .text-mixin;
+  .text-mixin();
   font-weight: @font-bold;
   line-height: @text-mlh;
 }
