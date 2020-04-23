@@ -1,3 +1,18 @@
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+  }
+}
+
+.footer__text {
+  .title-mixin();
+  font-size: 21px;
+}
+
 .footer__made-by {
   font-family: @main-font;
   font-size: @text-fs;
