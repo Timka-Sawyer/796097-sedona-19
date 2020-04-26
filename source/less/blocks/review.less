@@ -7,6 +7,74 @@
   line-height: @text-mlh;
 }
 
+.review__form {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  border-top: @border-top;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    padding: 0;
+    border: none;
+  }
+}
+
+.review__fieldset {
+  border: none;
+  border-bottom: @border-top;
+
+  @media (min-width: @tablet-width) {
+    min-width: 50%;
+    margin: 0;
+    padding: 0;
+    border: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-width: 50%;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.review__fieldset--name {
+  @media (min-width: @tablet-width) {
+    order: 2;
+  }
+}
+
+.review__fieldset--contact-info {
+  @media (min-width: @tablet-width) {
+    order: 3;
+    width: 100%;
+    border-top: @border-top;
+  }
+}
+
+.review__fieldset--exp {
+  @media (min-width: @tablet-width) {
+    order: 1;
+  }
+}
+
+.review__fieldset--sight {
+  @media (min-width: @tablet-width) {
+    order: 4;
+    width: 100%;
+    border-top: @border-top;
+  }
+}
+
+.review__fieldset--emotion {
+  @media (min-width: @tablet-width) {
+    order: 5;
+    width: 100%;
+    border: none;
+    border-top: @border-top;
+  }
+}
+
 .review__list {
   list-style: none;
 }
@@ -31,5 +99,13 @@
 
 .review__checkbox-label {
   .title-mixin();
+  text-transform: none;
+}
+
+.review__textarea {
+  .title-mixin();
+  width: 100%;
+  min-height: 160px;
+  background-color: @textarea-light;
   text-transform: none;
 }
