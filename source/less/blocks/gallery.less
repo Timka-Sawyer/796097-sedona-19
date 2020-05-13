@@ -10,7 +10,7 @@
 .gallery__wrap {
   display: flex;
   flex-direction: column;
-  border-top: 1px solid rgb(214, 214, 214);
+  border-top: @grey-border;
 
   @media (min-width: @tablet-width) {
     flex-direction: row;
@@ -29,7 +29,7 @@
   padding-bottom: 9px;
   padding-left: 20px;
   text-align: left;
-  border-bottom: 1px solid rgb(214, 214, 214);
+  border-bottom: @grey-border;
 
   @media (min-width: @tablet-width) {
     border: none;
@@ -74,6 +74,6 @@
   width: 23px;
   height: 21px;
   left: 0;
-  background-image: url("../../img/icon-like.svg");
+  background-image: url("../img/icon-like.svg");
   background-repeat: no-repeat;
 }

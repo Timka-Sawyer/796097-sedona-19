@@ -10,9 +10,9 @@
 }
 
 .benefits__title {
+  .title-mixin();
   padding-left: 32px;
   padding-right: 33px;
-  .title-mixin();
 
   @media (min-width: @tablet-width) {
     padding-left: 139px;
@@ -26,9 +26,9 @@
 }
 
 .benefits__intro {
+  .text-mixin();
   padding-left: 32px;
   padding-right: 33px;
-  .text-mixin();
 }
 
 .benefits__item {
@@ -57,21 +57,21 @@
   padding-top: 40px;
   padding-left: 27px;
   padding-right: 28px;
-  padding-bottom: 31px;
+  padding-bottom: 40px;
 
   @media (min-width: @tablet-width) {
     flex-grow: 1;
     padding-top: 40px;
     padding-left: 47px;
     padding-right: 47px;
-    padding-bottom: 31px;
+    padding-bottom: 40px;
   }
 
   @media (min-width: @desktop-width) {
     padding-top: 43px;
     padding-left: 85px;
     padding-right: 85px;
-    padding-bottom: 31px;
+    padding-bottom: 40px;
   }
 }
 
@@ -117,46 +117,106 @@
 }
 
 .benefits__featyres-title {
-  position: relative;
   .title-mixin();
+  position: relative;
 }
 
 .benefits__featyres-title--house::before {
-  .benefits__featyres-title-mobile();
-  background-image: url("../../img/icon-house.svg");
+  content: "";
+  position: absolute;
+  width: 37px;
+  height: 36px;
+  left: -50px;
+  top: -10px;
+  background-size: 37px 36px;
+  background-image: url("../img/icon-house.svg");
 
   @media (min-width: @tablet-width) {
-    .benefits__featyres-title-tablet();
+    content: "";
+    position: absolute;
+    width: 75px;
+    height: 72px;
+    left: 50%;
+    top: -100px;
+    margin-left: -37px;
+    background-size: 75px 72px;
   }
 
   @media (min-width: @desktop-width) {
-    .benefits__featyres-title-desktop();
+    content: "";
+    position: absolute;
+    width: 75px;
+    height: 72px;
+    left: 50%;
+    top: -100px;
+    margin-left: -37px;
+    background-size: 75px 72px;
   }
 }
 
 .benefits__featyres-title--memento::before {
-  .benefits__featyres-title-mobile();
-  background-image: url("../../img/icon-gift.svg");
+  content: "";
+  position: absolute;
+  width: 37px;
+  height: 36px;
+  left: -50px;
+  top: -10px;
+  background-size: 37px 36px;
+  background-image: url("../img/icon-gift.svg");
 
   @media (min-width: @tablet-width) {
-    .benefits__featyres-title-tablet();
+    content: "";
+    position: absolute;
+    width: 75px;
+    height: 72px;
+    left: 50%;
+    top: -100px;
+    margin-left: -37px;
+    background-size: 75px 72px;
   }
 
   @media (min-width: @desktop-width) {
-    .benefits__featyres-title-desktop();
+    content: "";
+    position: absolute;
+    width: 75px;
+    height: 72px;
+    left: 50%;
+    top: -100px;
+    margin-left: -37px;
+    background-size: 75px 72px;
   }
 }
 
 .benefits__featyres-title--food::before {
-  .benefits__featyres-title-mobile();
-  background-image: url("../../img/icon-burger.svg");
+  content: "";
+  position: absolute;
+  width: 37px;
+  height: 36px;
+  left: -50px;
+  top: -10px;
+  background-size: 37px 36px;
+  background-image: url("../img/icon-burger.svg");
 
   @media (min-width: @tablet-width) {
-    .benefits__featyres-title-tablet();
+    content: "";
+    position: absolute;
+    width: 75px;
+    height: 72px;
+    left: 50%;
+    top: -100px;
+    margin-left: -37px;
+    background-size: 75px 72px;
   }
 
   @media (min-width: @desktop-width) {
-    .benefits__featyres-title-desktop();
+    content: "";
+    position: absolute;
+    width: 75px;
+    height: 72px;
+    left: 50%;
+    top: -100px;
+    margin-left: -37px;
+    background-size: 75px 72px;
   }
 }
 
@@ -166,7 +226,7 @@
 
 .benefits__item--brand-color {
   background-color: @brand-color;
-  background-image: url("../../img/bg-triangle.svg");
+  background-image: url("../img/bg-triangle.svg");
   background-repeat: no-repeat;
   background-position: 50% top;
   background-size: auto auto;
@@ -220,7 +280,7 @@
 .benefits-other__item {
   background-color: #ededed;
   color: @text-color;
-  border-bottom: 1px solid #c2c2c2;
+  border-bottom: @grey-border;
   padding-top: 18px;
   padding-bottom: 18px;
 
@@ -301,25 +361,25 @@
 }
 
 .benefits__image--city {
-  background-image: url("../../img/main-city-mobile@1x.jpg");
+  background-image: url("../img/main-city-mobile@1x.jpg");
 
   @media (min-width: @tablet-width) {
-    background-image: url("../../img/main-city-tablet@1x.jpg");
+    background-image: url("../img/main-city-tablet@1x.jpg");
   }
 
   @media (min-width: @desktop-width) {
-    background-image: url("../../img/main-city-desktop@1x.jpg");
+    background-image: url("../img/main-city-desktop@1x.jpg");
   }
 }
 
 .benefits__image--bridge {
-  background-image: url("../../img/main-bridge-mobile@1x.jpg");
+  background-image: url("../img/main-bridge-mobile@1x.jpg");
 
   @media (min-width: @tablet-width) {
-    background-image: url("../../img/main-bridge-tablet@1x.jpg");
+    background-image: url("../img/main-bridge-tablet@1x.jpg");
   }
 
   @media (min-width: @desktop-width) {
-    background-image: url("../../img/main-bridge-desktop@1x.jpg");
+    background-image: url("../img/main-bridge-desktop@1x.jpg");
   }
 }
