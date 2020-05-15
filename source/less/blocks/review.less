@@ -10,12 +10,17 @@
 .review__form {
   display: flex;
   flex-wrap: wrap;
-  padding: 0;
   border-top: @border-top;
 
   @media (min-width: @tablet-width) {
     margin: 0;
-    padding: 0;
+    padding: 0 60px;
+    border: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+    padding: 0 120px;
     border: none;
   }
 }
@@ -23,16 +28,18 @@
 .review__fieldset {
   border: none;
   border-bottom: @border-top;
+  width: 100%;
+  padding: 0 20px;
 
   @media (min-width: @tablet-width) {
-    min-width: 50%;
+    width: 50%;
     margin: 0;
     padding: 0;
     border: none;
   }
 
   @media (min-width: @desktop-width) {
-    min-width: 50%;
+    width: 50%;
     margin: 0;
     padding: 0;
   }
@@ -67,6 +74,8 @@
 }
 
 .review__fieldset--emotion {
+  border-bottom: none;
+
   @media (min-width: @tablet-width) {
     order: 5;
     width: 100%;
@@ -77,29 +86,86 @@
 
 .review__list {
   list-style: none;
+  padding: 0;
 }
 
 .review__legend {
   .title-mixin();
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 24px;
 }
 
 .review__text-label {
   .text-mixin();
+  margin-right: 14px;
+  padding: 16px 0;
 }
 
 .review__contact-label {
   .text-mixin();
   line-height: @title-lh;
+  text-align: left;
 }
 
 .review__radio-label {
   .title-mixin();
+  position: relative;
+  padding-left: 76px;
   text-transform: none;
+}
+
+.review__input--radio + .review__radio-label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -8px;
+  width: 46px;
+  height: 46px;
+  background-color: #f2f2f2;
+  border-radius: 50px;
+}
+
+.review__input--radio:checked + .review__radio-label::after {
+  content: "";
+  position: absolute;
+  left: 16px;
+  top: 7px;
+  width: 16px;
+  height: 16px;
+  background-color: #333333;
+  background-repeat: no-repeat;
+  border-radius: 50px;
 }
 
 .review__checkbox-label {
   .title-mixin();
+  padding-left: 76px;
+  position: relative;
   text-transform: none;
+}
+
+.review__input--checkbox + .review__checkbox-label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -8px;
+  width: 46px;
+  height: 46px;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+}
+
+.review__input--checkbox:checked + .review__checkbox-label::after {
+  content: "";
+  position: absolute;
+  left: 12px;
+  top: 8px;
+  width: 46px;
+  height: 46px;
+  background-image: url("../../img/icon-tick.svg");
+  background-repeat: no-repeat;
+  border-radius: 5px;
 }
 
 .review__textarea {
@@ -108,4 +174,50 @@
   min-height: 160px;
   background-color: @textarea-light;
   text-transform: none;
+}
+
+.review__item {
+  margin-bottom: 20px;
+  display: flex;
+}
+
+.review__item--checkbox {
+  margin-bottom: 50px;
+}
+
+.review__item--radio {
+  margin-bottom: 20px;
+}
+
+.review__item--column {
+  flex-direction: column;
+}
+
+.review__input {
+  flex-grow: 1;
+  height: 58px;
+  padding: 0 22px;
+  background-color: #f2f2f2;
+  border: none;
+}
+
+.review__input--phone {
+  position: relative;
+}
+
+.review__input--email {
+  flex-grow: 1;
+  height: 14px;
+  padding: 22px;
+  background-color: #f2f2f2;
+  border: none;
+}
+
+.review__input--radio {
+  flex-grow: 0;
+  background-color: red;
+}
+
+.review__input--checkbox {
+  flex-grow: 0;
 }

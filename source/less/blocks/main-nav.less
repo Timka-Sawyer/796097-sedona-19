@@ -1,4 +1,5 @@
 .main-nav {
+  position: relative;
   display: flex;
   flex-direction: column;
   min-height: 220px;
@@ -50,11 +51,13 @@
   border-bottom: 1px solid #678fa8;
 
   @media (min-width: @tablet-width) {
+    min-width: 153px;
     border: none;
   }
 
   @media (min-width: @desktop-width) {
     border: none;
+    min-width: 239px;
   }
 }
 
@@ -64,6 +67,8 @@
 
 .main-nav__link {
   display: block;
+  padding: 8px;
+  text-align: center;
   font-family: @main-font;
   font-size: @title-fs;
   font-weight: @font-bold;
@@ -81,4 +86,30 @@
   @media (min-width: @desktop-width) {
     color: @title-color;
   }
+}
+
+.main-nav__toggle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  width: 60px;
+  height: 60px;
+  background-image: url("../img/icon-cross.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 23px 22px;
+  border: none;
+  outline: none;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.main-nav__toggle--closed {
+  background-image: url("../img/icon-menu.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 23px 22px;
 }
