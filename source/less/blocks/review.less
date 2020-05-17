@@ -115,6 +115,19 @@
   text-transform: none;
 }
 
+.review__input {
+  flex-grow: 1;
+  height: 58px;
+  padding: 0 22px;
+  background-color: #f2f2f2;
+  border: none;
+
+  font-family: @main-font;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: @font-bold;
+}
+
 .review__input--radio + .review__radio-label::before {
   content: "";
   position: absolute;
@@ -191,14 +204,6 @@
 
 .review__item--column {
   flex-direction: column;
-}
-
-.review__input {
-  flex-grow: 1;
-  height: 58px;
-  padding: 0 22px;
-  background-color: #f2f2f2;
-  border: none;
 }
 
 .review__input--phone {
