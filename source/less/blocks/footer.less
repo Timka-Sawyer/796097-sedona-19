@@ -4,17 +4,22 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-top: 20px;
+  padding-top: 47px;
   padding-bottom: 36px;
 
   @media (min-width: @tablet-width) {
     flex-direction: row;
     justify-content: start;
+    padding-top: 50px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 12px;
   }
 }
 
 .footer__visit {
-  margin-bottom: 41px;
+  margin-bottom: 37px;
   font-family: @main-font;
   font-size: @text-lh;
   font-weight: @font-bold;
@@ -67,4 +72,13 @@
   width: 40px;
   height: 53px;
   margin-top: 10px;
+}
+
+.footer__made-by-svg:hover {
+  fill: #81b3d2;
+}
+
+.footer__made-by-svg:active {
+  fill: @title-color;
+  opacity: 0.3;
 }

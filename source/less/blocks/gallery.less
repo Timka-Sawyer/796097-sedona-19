@@ -15,6 +15,7 @@
   @media (min-width: @tablet-width) {
     padding-left: 170px;
     padding-right: 170px;
+    margin-top: 30px;
   }
 
   @media (min-width: @desktop-width) {
@@ -33,12 +34,14 @@
     flex-wrap: wrap;
     border: none;
     padding: 60px;
-    padding-bottom: 46px;
+    padding-top: 54px;
+    padding-bottom: 42px;
   }
 
   @media (min-width: @desktop-width) {
     flex-direction: row;
     flex-wrap: wrap;
+    padding-top: 60px;
     padding-left: 0;
     padding-right: 0;
     padding-bottom: 46px;
@@ -60,6 +63,7 @@
   }
 
   @media (min-width: @desktop-width) {
+    position: relative;
     width: 33.3%;
   }
 }
@@ -84,15 +88,29 @@
   @media (min-width: @tablet-width) {
     flex-direction: row;
     align-items: center;
-    padding: 21px;
+    padding: 15px 20px;
+    padding-right: 30px;
     background-color: @textarea-light;
     margin-top: -5px;
   }
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 16px 0;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
 }
+
 
 .gallery__item-text {
   display: flex;
   flex-direction: column;
+
+  @media (min-width: @desktop-width) {
+    margin-left: 21px;
+  }
 }
 
 .gallery__item-title {
@@ -101,6 +119,10 @@
   font-weight: @font-bold;
   line-height: @text-mlh;
   margin: 0;
+
+  @media (min-width: @desktop-width) {
+    color: @light-color;
+  }
 }
 
 .gallery__text {
@@ -110,6 +132,10 @@
   line-height: @text-mlh;
   color: @text-color;
   margin: 0;
+
+  @media (min-width: @desktop-width) {
+    color: @light-color;
+  }
 }
 
 .gallery__item-img-wrap {
@@ -118,6 +144,16 @@
 
   @media (min-width: @tablet-width) {
     width: 100%;
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 267px;
+  }
+}
+
+.gallery__item-img-wrap--most-big {
+  @media (min-width: @desktop-width) {
+    height: 400px;
   }
 }
 
@@ -144,15 +180,22 @@
   @media (min-width: @tablet-width) {
     margin-left: auto;
   }
+
+  @media (min-width: @desktop-width) {
+    color: @light-color;
+    margin-right: 26px;
+  }
 }
 
-.gallery__like::before {
+.gallery__like-img {
   position: absolute;
+  left: 0;
   opacity: 0.3;
-  content: "";
   width: 23px;
   height: 21px;
-  left: 0;
-  background-image: url("../img/icon-like.svg");
-  background-repeat: no-repeat;
+
+  @media (min-width: @desktop-width) {
+    fill: @light-color;
+    opacity: 1;
+  }
 }

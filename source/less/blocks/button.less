@@ -2,6 +2,16 @@
   display: block;
   padding: 17px 40px;
   border: none;
+  color: @light-color;
+}
+
+.button:hover {
+  background-color: @brand-hover;
+}
+
+.button:active {
+  background-color: @brand-down;
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .button--booking {
@@ -9,14 +19,15 @@
   font-size: @text-lh;
   font-weight: @font-bold;
   line-height: @text-lh;
-  color: @light-color;
   background-color: @brand-color;
   text-transform: uppercase;
   width: 200px;
   margin: auto;
 
   @media (min-width: @tablet-width) {
-    min-width: 458px;
+    text-decoration: none;
+    padding-top: 20px;
+    width: 378px;
   }
 }
 
@@ -29,7 +40,18 @@
   color: @light-color;
   background-color: @brand-color;
   text-transform: uppercase;
-  margin: 31px auto;
+  margin: 6px auto;
+  width: 280px;
+
+  @media (min-width: @tablet-width) {
+    margin: 35px 0;
+    padding: 18px 0;
+    width: 324px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 480px;
+  }
 }
 
 .button--social {
@@ -37,8 +59,33 @@
   align-items: center;
   justify-content: center;
   padding: 0;
-  margin-left: 6px;
+  margin-right: 6px;
   background-color: @brand-color;
   width: 46px;
   height: 48px;
+}
+
+.button--popup {
+  font-family: @main-font;
+  font-size: @title-fs;
+  font-weight: @font-bold;
+  line-height: @title-lh;
+  color: @light-color;
+  background-color: @brand-color;
+  text-transform: uppercase;
+  width: 180px;
+  margin: auto;
+}
+
+.button--popup-close {
+  font-family: @main-font;
+  font-size: @title-fs;
+  font-weight: @font-bold;
+  line-height: @title-lh;
+  color: @light-color;
+  background-color: @brand-color;
+  text-transform: uppercase;
+  width: 280px;
+  margin-left: auto;
+  margin-right: auto;
 }

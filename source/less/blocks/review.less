@@ -1,26 +1,46 @@
 .review__title {
   .title-mixin();
+
+  @media (min-width: @tablet-width) {
+    font-size: @big-fs;
+  }
 }
 
 .review__intro {
   .text-mixin();
   line-height: @text-mlh;
+  margin-top: 26px;
+  margin-bottom: 17px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 30px;
+  }
+}
+
+.review__br {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: inline;
+  }
 }
 
 .review__form {
   display: flex;
   flex-wrap: wrap;
+  padding-top: 18px;
   border-top: @border-top;
 
   @media (min-width: @tablet-width) {
     margin: 0;
     padding: 0 60px;
+    padding-top: 57px;
     border: none;
   }
 
   @media (min-width: @desktop-width) {
     margin: 0;
-    padding: 0 120px;
+    padding: 42px 120px;
     border: none;
   }
 }
@@ -30,6 +50,8 @@
   border-bottom: @border-top;
   width: 100%;
   padding: 0 20px;
+  padding-bottom: 5px;
+  margin-bottom: 18px;
 
   @media (min-width: @tablet-width) {
     width: 50%;
@@ -48,20 +70,33 @@
 .review__fieldset--name {
   @media (min-width: @tablet-width) {
     order: 2;
+    margin-left: auto;
+    margin-right: 0;
+    width: 266px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 77px;
+    width: 401px;
   }
 }
 
 .review__fieldset--contact-info {
   @media (min-width: @tablet-width) {
     order: 3;
+    margin-top: 35px;
+    margin-bottom: 19px;
     width: 100%;
     border-top: @border-top;
   }
 }
 
 .review__fieldset--exp {
+  padding-bottom: 13px;
+
   @media (min-width: @tablet-width) {
     order: 1;
+    border-right: @grey-border;
   }
 }
 
@@ -87,6 +122,32 @@
 .review__list {
   list-style: none;
   padding: 0;
+  margin-top: 21px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 58px;
+    margin-bottom: 20px;
+  }
+}
+
+.review__list--sight {
+  display: flex;
+  flex-wrap: wrap;
+
+  @media (max-width: 767px) {
+    flex-direction: column;
+  }
+}
+
+.review__list--contact {
+  margin-top: 26px;
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 74px;
+    margin-bottom: 34px;
+  }
 }
 
 .review__legend {
@@ -94,6 +155,26 @@
   margin-left: auto;
   margin-right: auto;
   margin-top: 24px;
+
+  @media (min-width: @tablet-width) {
+    font-size: @text-lh;
+    text-align: left;
+    margin-left: 0;
+  }
+}
+
+.review__legend--exp {
+  @media (min-width: @desktop-width) {
+    margin-left: 77px;
+  }
+}
+
+.review__legend--centre {
+  @media (min-width: @tablet-width) {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .review__text-label {
@@ -106,6 +187,45 @@
   .text-mixin();
   line-height: @title-lh;
   text-align: left;
+  padding-left: 19px;
+  margin-top: -5px;
+
+  @media (min-width: @tablet-width) {
+    display: inline;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 14px;
+    padding-left: 0;
+  }
+}
+
+.review__contact-label--mail {
+  position: relative;
+  margin-top: -12px;
+
+  @media (min-width: @desktop-width) {
+    margin-top: 14px;
+  }
+}
+
+.review__contact-label--mail::before {
+  position: absolute;
+  content: "";
+  top: 37px;
+  right: 0;
+  width: 58px;
+  height: 58px;
+  background-color: @bg-form-before;
+  background-image: url("../../img/icon-mail.svg");
+  background-size: 18px 18px;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @media (min-width: @desktop-width) {
+    top: -14px;
+    right: -333px;
+  }
 }
 
 .review__radio-label {
@@ -121,34 +241,70 @@
   padding: 0 22px;
   background-color: #f2f2f2;
   border: none;
+  width: 100%;
 
   font-family: @main-font;
   font-size: 18px;
   line-height: 26px;
   font-weight: @font-bold;
+
+  @media (min-width: @desktop-width) {
+    width: auto;
+  }
+}
+
+.review__input:hover {
+  background-color: @input-hover-color;
+}
+
+.review__input:active {
+  background-color: @input-active-color;
+}
+
+.review__input--text {
+  width: 100%;
+}
+
+.review__input--text:active {
+  background-color: @light-color;
+  border: solid 4px @input-hover-color;
+  height: 50px;
+  padding-left: 18px;
 }
 
 .review__input--radio + .review__radio-label::before {
   content: "";
   position: absolute;
   left: 0;
-  top: -8px;
-  width: 46px;
-  height: 46px;
+  top: -13px;
+  width: 56px;
+  height: 56px;
   background-color: #f2f2f2;
   border-radius: 50px;
+}
+
+.review__input--radio:hover + .review__radio-label:hover::before {
+  background-color: @input-hover-color;
+}
+
+.review__input--radio:active + .review__radio-label:active::before {
+  background-color: @input-active-color;
 }
 
 .review__input--radio:checked + .review__radio-label::after {
   content: "";
   position: absolute;
-  left: 16px;
-  top: 7px;
-  width: 16px;
-  height: 16px;
+  left: 19px;
+  top: 5px;
+  width: 20px;
+  height: 20px;
   background-color: #333333;
   background-repeat: no-repeat;
   border-radius: 50px;
+}
+
+.review__input--radio:checked + .review__radio-label:active::after {
+  opacity: 0.3;
 }
 
 .review__checkbox-label {
@@ -161,19 +317,27 @@
 .review__input--checkbox + .review__checkbox-label::before {
   content: "";
   position: absolute;
-  left: 0;
-  top: -8px;
-  width: 46px;
-  height: 46px;
+  left: -2px;
+  top: -13px;
+  width: 53px;
+  height: 53px;
   background-color: #f2f2f2;
   border-radius: 5px;
+}
+
+.review__input--checkbox:hover + .review__checkbox-label:hover::before {
+  background-color: @input-hover-color;
+}
+
+.review__input--checkbox:active + .review__checkbox-label:active::before {
+  background-color: @input-active-color;
 }
 
 .review__input--checkbox:checked + .review__checkbox-label::after {
   content: "";
   position: absolute;
-  left: 12px;
-  top: 8px;
+  left: 15px;
+  top: 6px;
   width: 46px;
   height: 46px;
   background-image: url("../img/icon-tick.svg");
@@ -181,12 +345,21 @@
   border-radius: 5px;
 }
 
+.review__input--checkbox:checked + .review__checkbox-label:active::after {
+  opacity: 0.3;
+}
+
 .review__textarea {
   .title-mixin();
-  width: 100%;
-  min-height: 160px;
-  background-color: @textarea-light;
   text-transform: none;
+  padding: 17px;
+  width: 100%;
+  min-height: 130px;
+  background-color: #f2f2f2;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 41px;
+  }
 }
 
 .review__item {
@@ -195,27 +368,121 @@
 }
 
 .review__item--checkbox {
-  margin-bottom: 50px;
+  margin-bottom: 54px;
+  margin-top: 31px;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 98px;
+    margin-right: -52px;
+    margin-top: -1px;
+    margin-bottom: 63px;
+    width: 33%;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 2px;
+    margin-right: 65px;
+    width: 20%;
+  }
+}
+
+.review__item--checkbox:nth-child(3) {
+  @media (min-width: @desktop-width) {
+    margin-right: 44px;
+  }
+}
+
+.review__item--checkbox:last-child {
+  margin-bottom: 36px;
+
+  @media (min-width: @desktop-width) {
+    margin-right: 0;
+    width: 21%;
+  }
 }
 
 .review__item--radio {
-  margin-bottom: 20px;
+  margin-bottom: 12px;
+  margin-top: 16px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 17px;
+    margin-top: 17px;
+  }
 }
 
 .review__item--column {
   flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 31px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    margin-bottom: 0;
+  }
 }
 
 .review__input--phone {
+  width: auto;
+  margin-top: 7px;
+  padding-right: 58px;
+
+  @media (min-width: @desktop-width) {
+    margin-top: 0;
+    margin-left: 14px;
+    margin-right: 80px;
+  }
+}
+
+.review__contact-label--phone {
   position: relative;
 }
 
+.review__contact-label--phone::before {
+  position: absolute;
+  content: "";
+  top: 37px;
+  right: 0;
+  width: 58px;
+  height: 58px;
+  background-color: @bg-form-before;
+  background-image: url("../../img/icon-phone.svg");
+  background-size: 18px 18px;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @media (min-width: @desktop-width) {
+    top: -14px;
+    right: -331px;
+  }
+}
+
 .review__input--email {
+  width: auto;
   flex-grow: 1;
   height: 14px;
   padding: 22px;
   background-color: #f2f2f2;
   border: none;
+  margin-top: 7px;
+  margin-bottom: 3px;
+  padding-right: 58px;
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 0;
+    margin-top: 0;
+    margin-left: 17px;
+  }
+}
+
+.review__hide {
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
 }
 
 .review__input--radio {
@@ -225,4 +492,18 @@
 
 .review__input--checkbox {
   flex-grow: 0;
+}
+
+.review__required {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: inline;
+    order: 7;
+    margin-top: 55px;
+    margin-right: 0;
+    margin-left: auto;
+    font-size: 14px;
+    text-transform: uppercase;
+  }
 }

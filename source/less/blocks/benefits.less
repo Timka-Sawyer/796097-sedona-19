@@ -7,28 +7,35 @@
   list-style: none;
 
   counter-reset: benefit;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 40px;
+    margin-bottom: 0;
+  }
 }
 
 .benefits__title {
   .title-mixin();
   padding-left: 32px;
   padding-right: 33px;
+  font-size: 21px;
 
   @media (min-width: @tablet-width) {
     padding-left: 139px;
     padding-right: 139px;
+    margin-top: 50px;
   }
 
   @media (min-width: @desktop-width) {
     padding-left: 355px;
     padding-right: 355px;
+    margin-top: -60px;
   }
 }
 
 .benefits__intro {
   .text-mixin();
-  padding-left: 32px;
-  padding-right: 33px;
+  padding: 13px 32px;
 }
 
 .benefits__item {
@@ -43,14 +50,26 @@
 .benefits__item-title {
   .title-mixin();
   color: @light-color;
+
+  @media (min-width: @tablet-width) {
+    font-size: @text-lh;
+    margin: 0;
+    padding: 7px 26px;
+    padding-bottom: 4px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: @text-lh;
+  }
 }
 
 .benefits__item-title::after {
   display: block;
   counter-increment: benefit;
-  content: "— №" counter(benefit) " —";
+  content: "– №" counter(benefit) " –";
   font-weight: 400;
-  font-size: 0.8em;
+  font-size: 14px;
+  margin-top: 9px;
 }
 
 .benefits__info {
@@ -62,9 +81,7 @@
   @media (min-width: @tablet-width) {
     flex-grow: 1;
     padding-top: 40px;
-    padding-left: 47px;
-    padding-right: 47px;
-    padding-bottom: 40px;
+    padding-bottom: 27px;
   }
 
   @media (min-width: @desktop-width) {
@@ -79,7 +96,7 @@
   padding-top: 61px;
 
   @media (min-width: @tablet-width) {
-    padding-top: 40px;
+    padding: 33px 41px;
   }
 
   @media (min-width: @desktop-width) {
@@ -93,6 +110,10 @@
 .benefits__description {
   .text-mixin();
   color: @light-color;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+  }
 }
 
 .benefits__featyres-list {
@@ -107,18 +128,61 @@
 
   @media (min-width: @tablet-width) {
     flex-direction: row;
-    padding-top: 140px;
+    padding-right: 0;
+    padding-top: 137px;
+    padding-bottom: 46px;
+    padding-left: 0;
     text-align: center;
   }
 
   @media (min-width: @desktop-width) {
     flex-direction: row;
+    padding-top: 137px;
+    padding-bottom: 69px;
+  }
+}
+
+.benefits__featyres-item {
+  @media (min-width: @tablet-width) {
+    width: 33.3%;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 74px;
+  }
+}
+
+.benefits__featyres-item--house {
+  @media (min-width: @tablet-width) {
+    order: 1;
+  }
+}
+
+.benefits__featyres-item--food {
+  @media (min-width: @tablet-width) {
+    order: 2;
+  }
+}
+
+.benefits__featyres-item--memento {
+  @media (min-width: @tablet-width) {
+    order: 3;
+  }
+}
+
+.benefits__featyres {
+  @media (min-width: @desktop-width) {
+    width: 252px;
   }
 }
 
 .benefits__featyres-title {
   .title-mixin();
   position: relative;
+
+  @media (min-width: @tablet-width) {
+    font-size: @text-lh;
+  }
 }
 
 .benefits__featyres-title--house::before {
@@ -222,6 +286,14 @@
 
 .benefits__featyres-description {
   .text-mixin();
+
+  @media (min-width: @tablet-width) {
+    padding: 0 45px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
+  }
 }
 
 .benefits__item--brand-color {
@@ -267,13 +339,15 @@
     justify-content: center;
     list-style: none;
     padding: 0;
+    padding-top: 39px;
+    padding-bottom: 29px;
   }
 
   @media (min-width: @desktop-width) {
     display: flex;
     flex-direction: row;
     list-style: none;
-    padding: 0;
+    padding-bottom: 49px;
   }
 }
 
@@ -285,7 +359,9 @@
   padding-bottom: 18px;
 
   @media (min-width: @tablet-width) {
+    width: 33.3%;
     border: none;
+    padding: 0 41px;
   }
 }
 
@@ -293,47 +369,18 @@
   border-bottom: none;
 }
 
-.benefits-other__item:nth-child(1) {
-  @media (min-width: @tablet-width) {
-    width: auto;
-    margin-left: 55px;
-    margin-right: 52px;
-  }
-
-  @media (min-width: @desktop-width) {
-    margin-left: 57px;
-    margin-right: 58px;
-  }
-}
-
-.benefits-other__item:nth-child(2) {
-  @media (min-width: @tablet-width) {
-    width: auto;
-    margin-left: 49px;
-    margin-right: 48px;
-  }
-
-  @media (min-width: @desktop-width) {
-    margin-left: 70px;
-    margin-right: 70px;
-  }
-}
-
-.benefits-other__item:nth-child(3) {
-  @media (min-width: @tablet-width) {
-    width: auto;
-    margin-left: 56px;
-    margin-right: 55px;
-  }
-
-  @media (min-width: @desktop-width) {
-    margin-left: 70px;
-    margin-right: 70px;
-  }
-}
-
 .benefits__item-title--other {
   color: @title-color;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 70px;
+    margin-right: 70px;
+  }
 }
 
 .benefits__description--other {
@@ -420,5 +467,13 @@
     @media (min-resolution: @retina-x2) {
       background-image: url("../img/main-bridge-desktop@2x.jpg");
     }
+  }
+}
+
+.benefits__br {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: inline;
   }
 }
