@@ -2,6 +2,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
+  z-index: 1;
 
   @media (min-width: @tablet-width) {
     flex-direction: row;
@@ -138,18 +139,7 @@
   background-size: 23px 22px;
   border: none;
   outline: none;
-
-  @media (min-width: @tablet-width) {
-    display: none;
-  }
-}
-
-.main-nav__toggle--closed {
-  background-image: url("../img/icon-cross.svg");
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  background-size: 23px 22px;
-  background-color: rgba(0, 0, 0, 0);
+  cursor: pointer;
 
   @media (min-width: @tablet-width) {
     display: none;

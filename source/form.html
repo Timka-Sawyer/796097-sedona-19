@@ -10,10 +10,9 @@
 
 <body>
     <div class="wrapper">
-        <header class="header">
+        <header class="header header--closed header--opened header--nojs">
             <nav class="main-nav">
-                <ul class="main-nav__list ">
-                    <!-- Списку добавить класс visually-hidden для скрытия меню-->
+                <ul class="main-nav__list">
                     <li class="main-nav__item">
                         <a class="main-nav__link" href="./index.html">Главная</a>
                     </li>
@@ -21,169 +20,168 @@
                         <a class="main-nav__link" href="./photo.html">Фото и видео</a>
                     </li>
                 </ul>
-                <ul class="main-nav__list main-nav__list--right ">
-                    <!-- Списку добавить класс visually-hidden для скрытия меню-->
-                    <li class="main-nav__item ">
+                <ul class="main-nav__list main-nav__list--right">
+                    <li class="main-nav__item">
                         <a class="main-nav__link main-nav__link--active">Форма отзыва</a>
                     </li>
-                    <li class="main-nav__item ">
-                        <a class="main-nav__link " href="https://htmlacademy.ru ">HTML Academy</a>
+                    <li class="main-nav__item">
+                        <a class="main-nav__link" href="https://htmlacademy.ru">HTML Academy</a>
                     </li>
                 </ul>
-                <a class="header__logo " href="./index.html "></a>
-                <button class="main-nav__toggle main-nav__toggle--closed" type="button "></button>
-                <!-- Кнопке добавлять или удалять класс main-nav__toggle--closed в зависимости от состояния меню-->
+                <a class="header__logo" href="./index.html"></a>
+                <button class="main-nav__toggle" type="button"></button>
             </nav>
-            <div class="header__intro header__intro--photo ">
-                <img class="header__intro-sedona" src="./img/text-sedona.svg " width="229 " height="39 " alt="Изображение Welcome ">
+            <div class="header__intro header__intro--photo">
+                <img class="header__intro-sedona" src="./img/text-sedona.svg" width="229" height="39" alt="Изображение Welcome">
+                <div class="header__triangle-svg"></div>
             </div>
         </header>
-        <main class="main ">
-            <section class="review ">
-                <h2 class="review__title ">Оставьте свой отзыв</h2>
-                <p class="review__intro ">Помогите нашим отелям стать лучше! оставьте отзыв о них, <br class="review__br"> а также о посещенных вами достопримечательностях</p>
-                <form class="review__form " action="https://echo.htmlacademy.ru " method="POST ">
-                    <fieldset class="review__fieldset review__fieldset--name ">
-                        <legend class="review__legend ">Представьтесь:</legend>
-                        <ul class="review__list ">
-                            <li class="review__item ">
-                                <label class="review__text-label " for="name ">Имя<sup>&#42;</sup>:</label>
-                                <input class="review__input review__input--text " type="text " name="name " id="name " placeholder="Петр " required>
+        <main class="main">
+            <section class="review">
+                <h2 class="review__title">Оставьте свой отзыв</h2>
+                <p class="review__intro">Помогите нашим отелям стать лучше! оставьте отзыв о них, <br class="review__br-desktop"> <br class="review__br"> а также о посещенных вами достопримечательностях</p>
+                <form class="review__form" action="https://echo.htmlacademy.ru" method="POST">
+                    <fieldset class="review__fieldset review__fieldset--name">
+                        <legend class="review__legend">Представьтесь:</legend>
+                        <ul class="review__list">
+                            <li class="review__item">
+                                <label class="review__text-label" for="name">Имя<sup>&#42;</sup>:</label>
+                                <input class="review__input review__input--text" type="text" name="name" id="name" placeholder="Петр" required>
                             </li>
-                            <li class="review__item ">
-                                <label class="review__text-label " for="surname ">Фамилия<sup>&#42;</sup>:</label>
-                                <input class="review__input review__input--text " type="text " name="surname " id="surname " placeholder="Иванов " required>
+                            <li class="review__item">
+                                <label class="review__text-label" for="surname">Фамилия<sup>&#42;</sup>:</label>
+                                <input class="review__input review__input--text" type="text" name="surname" id="surname" placeholder="Иванов" required>
                             </li>
-                            <li class="review__item ">
-                                <label class="review__text-label " for="patronymic ">Отчество:</label>
-                                <input class="review__input review__input--text " type="text " name="patronymic " id="patronymic " placeholder="Александрович ">
+                            <li class="review__item">
+                                <label class="review__text-label" for="patronymic">Отчество:</label>
+                                <input class="review__input review__input--text" type="text" name="patronymic" id="patronymic" placeholder="Александрович">
                             </li>
                         </ul>
                     </fieldset>
-                    <fieldset class="review__fieldset review__fieldset--contact-info ">
-                        <legend class="review__legend review__legend--centre">Контактная информация</legend>
+                    <fieldset class="review__fieldset review__fieldset--contact-info">
+                        <legend class="review__legend review__legend--centre">Контактная информация:</legend>
                         <ul class="review__list review__list--contact">
                             <li class="review__item review__item--column">
                                 <label class="review__contact-label review__contact-label--phone" for="contact-phone"> <span class="review__hide">Контактный</span> телефон<sup>&#42;</sup>:</label>
-                                <input class="review__input review__input--phone " type="tel " name="phone-number " id="contact-phone " placeholder="Введите телефон " required>
+                                <input class="review__input review__input--phone" type="tel" name="phone-number" id="contact-phone" placeholder="Введите телефон" required>
                             </li>
                             <li class="review__item review__item--column">
-                                <label class="review__contact-label review__contact-label--mail" for="contact-email ">Электронная почта<sup>&#42;</sup>:</label>
-                                <input class="review__input review__input--email " type="email " name="email " id="contact-email " placeholder="Введите e-mail " required>
+                                <label class="review__contact-label review__contact-label--mail" for="contact-email">Электронная почта<sup>&#42;</sup>:</label>
+                                <input class="review__input review__input--email" type="email" name="email" id="contact-email" placeholder="Введите e-mail" required>
                             </li>
                         </ul>
                     </fieldset>
-                    <fieldset class="review__fieldset review__fieldset--exp ">
+                    <fieldset class="review__fieldset review__fieldset--exp">
                         <legend class="review__legend review__legend--exp">Ваше общее впечатление:</legend>
-                        <ul class="review__list ">
+                        <ul class="review__list">
                             <li class="review__item review__item--radio">
-                                <input class="review__input review__input--radio visually-hidden" type="radio" name="impression " id="positive " value="positive " checked>
-                                <label class="review__radio-label review__item--radio" for="positive ">Скорее положительное</label>
+                                <input class="review__input review__input--radio" type="radio" name="impression" id="positive" value="positive" checked>
+                                <label class="review__radio-label" for="positive">Скорее положительное</label>
                             </li>
                             <li class="review__item review__item--radio">
-                                <input class="review__input review__input--radio visually-hidden" type="radio" name="impression " id="negative " value="negative ">
-                                <label class="review__radio-label review__item--radio" for="negative ">Скорее отрицательное</label>
+                                <input class="review__input review__input--radio" type="radio" name="impression" id="negative" value="negative">
+                                <label class="review__radio-label" for="negative">Скорее отрицательное</label>
                             </li>
                             <li class="review__item ">
-                                <input class="review__input review__input--radio visually-hidden" type="radio" name="impression " id="undefined " value="undefined ">
-                                <label class="review__radio-label review__item--radio" for="undefined ">Затрудняюсь ответить</label>
+                                <input class="review__input review__input--radio" type="radio" name="impression" id="undefined" value="undefined">
+                                <label class="review__radio-label" for="undefined">Затрудняюсь ответить</label>
                             </li>
                         </ul>
                     </fieldset>
-                    <fieldset class="review__fieldset review__fieldset--sight ">
-                        <legend class="review__legend review__legend--centre">Посещенные <br class="benefits__br"> достопримечательности:</legend>
+                    <fieldset class="review__fieldset review__fieldset--sight">
+                        <legend class="review__legend review__legend--centre">Посещенные <br class="review__br"> <br class="review__br-desktop"> достопримечательности:</legend>
                         <ul class="review__list review__list--sight">
                             <li class="review__item review__item--checkbox">
-                                <input class="review__input review__input--checkbox visually-hidden " type="checkbox" name="sight " id="devils-bridge " value="devils-bridge " checked>
-                                <label class="review__checkbox-label " for="devils-bridge ">Мост Дьявола</label>
+                                <input class="review__input review__input--checkbox" type="checkbox" name="sight" id="devils-bridge" value="devils-bridge" checked>
+                                <label class="review__checkbox-label" for="devils-bridge">Мост Дьявола</label>
                             </li>
                             <li class="review__item review__item--checkbox">
-                                <input class="review__input review__input--checkbox visually-hidden" type="checkbox" name="sight " id="bell-mountain " value="bell-mountain " checked>
-                                <label class="review__checkbox-label " for="bell-mountain ">Гора-Колокол</label>
+                                <input class="review__input review__input--checkbox" type="checkbox" name="sight" id="bell-mountain" value="bell-mountain" checked>
+                                <label class="review__checkbox-label" for="bell-mountain">Гора-Колокол</label>
                             </li>
                             <li class="review__item review__item--checkbox">
-                                <input class="review__input review__input--checkbox visually-hidden" type="checkbox" name="sight " id="slide-park " value="slide-park " checked>
-                                <label class="review__checkbox-label " for="slide-park ">Слайд-парк</label>
+                                <input class="review__input review__input--checkbox" type="checkbox" name="sight" id="slide-park" value="slide-park" checked>
+                                <label class="review__checkbox-label" for="slide-park">Слайд-парк</label>
                             </li>
                             <li class="review__item review__item--checkbox">
-                                <input class="review__input review__input--checkbox visually-hidden" type="checkbox" name="sight " id="red-rocks " value="red-rocks ">
-                                <label class="review__checkbox-label " for="red-rocks ">Красные скалы</label>
+                                <input class="review__input review__input--checkbox" type="checkbox" name="sight" id="red-rocks" value="red-rocks">
+                                <label class="review__checkbox-label" for="red-rocks">Красные скалы</label>
                             </li>
                         </ul>
                     </fieldset>
-                    <fieldset class="review__fieldset review__fieldset--emotion ">
+                    <fieldset class="review__fieldset review__fieldset--emotion">
                         <legend class="review__legend review__legend--centre">Опишите свои эмоции:</legend>
-                        <p class="review__item ">
-                            <textarea class="review__textarea " rows="5 " name="emotions-descriptions " id="emotions-descriptions " placeholder="Опишите подробно все свои восторги "></textarea>
-                            <label hidden class="visually-hidden " for="emotions-descriptions ">Опишите свои эмоции</label>
+                        <p class="review__item">
+                            <textarea class="review__textarea" rows="5" name="emotions-descriptions" id="emotions-descriptions" placeholder="Опишите подробно все свои восторги"></textarea>
+                            <label hidden class="visually-hidden" for="emotions-descriptions">Опишите свои эмоции</label>
                         </p>
                     </fieldset>
-                    <button class="button button--send " type="submit ">Отправить отзыв</button>
+                    <button class="button button--send" type="submit">Отправить отзыв</button>
                     <span class="review__required"> &#42; – Обязательные поля</span>
                 </form>
             </section>
         </main>
-        <footer class="footer ">
+        <footer class="footer">
 
-            <p class="footer__visit ">#Visitsedona</p>
-            <div class="socials ">
-                <ul class="socials__list ">
-                    <li class="socials__item ">
-                        <a class="button button--social " href=" ">
-                            <svg class="socials__svg" version="1.0 " id="Layer_1 " xmlns="http://www.w3.org/2000/svg " xmlns:xlink="http://www.w3.org/1999/xlink " x="0px " y="0px " width="17.5px " height="14.663px " viewBox="0 0 17.5 14.663 " enable-background="new 0 0
-                            17.5 14.663 " xml:space="preserve ">
-                            <g id="W6EeEF_1_ ">
+            <p class="footer__visit">#Visitsedona</p>
+            <div class="socials">
+                <ul class="socials__list">
+                    <li class="socials__item">
+                        <a class="button button--social" href="">
+                            <svg class="socials__svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="17.5px" height="14.663px" viewBox="0 0 17.5 14.663" enable-background="new 0 0
+                            17.5 14.663" xml:space="preserve">
+                            <g id="W6EeEF_1_">
                               <g>
-                                <path fill-rule="evenodd " clip-rule="evenodd " d="M11.283,0.153c1.736-0.484,3.074,0.264,3.685,1.15 c0.694-0.225,1.372-0.47,2.072-0.69c-0.004,0.841-0.538,1.478-0.883,1.728C16.861,2.506,17.5,1.86,17.5,1.86
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M11.283,0.153c1.736-0.484,3.074,0.264,3.685,1.15 c0.694-0.225,1.372-0.47,2.072-0.69c-0.004,0.841-0.538,1.478-0.883,1.728C16.861,2.506,17.5,1.86,17.5,1.86
                             c-0.175,0.977-1.035,1.746-1.611,1.977C15.65,10.429,12.617,14.793,5.507,14.66c-0.538,0,0.077,0-0.46,0 c-0.422,0-4.29-0.45-5.047-1.843c2.341,0.192,4.011-0.412,4.835-1.15c-0.989-0.293-2.761-0.464-3.07-2.881 c0.362,0.105,0.583,0.223,1.228,0.117C1.757,8.067,0.385,7.366,0.461,5.218c0.294,0.319,1.1,0.523,1.381,0.461
-                            c-0.725-0.235-2.03-3.281-0.921-4.836C2.794,2.655,4.769,4.364,8.29,4.528C8.506,2.288,9.461,0.788,11.283,0.153z "/>
+                            c-0.725-0.235-2.03-3.281-0.921-4.836C2.794,2.655,4.769,4.364,8.29,4.528C8.506,2.288,9.461,0.788,11.283,0.153z"/>
                               </g>
                             </g>
                           </svg>
                         </a>
                     </li>
-                    <li class="socials__item ">
-                        <a class="button button--social " href=" ">
-                            <svg class="socials__svg" version="1.0 " id="Layer_1 " xmlns="http://www.w3.org/2000/svg " xmlns:xlink="http://www.w3.org/1999/xlink " x="0px " y="0px " width="8.672px " height="18.944px " viewBox="0 0 8.672 18.944 " enable-background="new 0
-                            0 8.672 18.944 " xml:space="preserve ">
+                    <li class="socials__item">
+                        <a class="button button--social" href="">
+                            <svg class="socials__svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="8.672px" height="18.944px" viewBox="0 0 8.672 18.944" enable-background="new 0
+                            0 8.672 18.944" xml:space="preserve">
                             <path d="M6.275,3.356c0.799,0,1.599,0,2.398,0c0-1.119,0-2.237,0-3.356c-0.959,0-1.92,0-2.878,0C2.656,0.181,1.54,2.387,1.948,6.114 H0v3.518h1.959c0,3.104,0,6.208,0,9.312c1.279,0,2.559,0,3.837,0c0-3.104,0-6.208,0-9.312h2.857V6.114H5.787
-                            C5.765,5.069,5.75,3.709,6.275,3.356z "/>
+                            C5.765,5.069,5.75,3.709,6.275,3.356z"/>
                           </svg>
                         </a>
                     </li>
-                    <li class="socials__item ">
-                        <a class="button button--social " href=" ">
-                            <svg class="socials__svg" version="1.0 " id="Layer_1 " xmlns="http://www.w3.org/2000/svg " xmlns:xlink="http://www.w3.org/1999/xlink " x="0px " y="0px " width="19.979px " height="14.015px " viewBox="0 0 19.979 14.015 " enable-background="new
-                            0 0 19.979 14.015 " xml:space="preserve ">
-                            <path d="M17.145,0H2.835C1.275,0,0,1.275,0,2.835v8.345c0,1.56,1.275,2.835,2.835,2.835h14.31c1.56,0,2.835-1.275,2.835-2.835V2.835 C19.979,1.275,18.704,0,17.145,0z M7.036,10.392V3.623l6.769,3.384L7.036,10.392z "/>
+                    <li class="socials__item">
+                        <a class="button button--social" href="">
+                            <svg class="socials__svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="19.979px" height="14.015px" viewBox="0 0 19.979 14.015" enable-background="new
+                            0 0 19.979 14.015" xml:space="preserve">
+                            <path d="M17.145,0H2.835C1.275,0,0,1.275,0,2.835v8.345c0,1.56,1.275,2.835,2.835,2.835h14.31c1.56,0,2.835-1.275,2.835-2.835V2.835 C19.979,1.275,18.704,0,17.145,0z M7.036,10.392V3.623l6.769,3.384L7.036,10.392z"/>
                           </svg>
                         </a>
                     </li>
                 </ul>
             </div>
-            <div class="footer__made-by ">
-                <p class="footer__made-by-text ">Разработано</p>
-                <a class="footer__made-by-link " href=" ">
-                    <svg fill="#000000" class="footer__made-by-svg " xmlns="http://www.w3.org/2000/svg " viewBox="0 0 60 60 ">
+            <div class="footer__made-by">
+                <p class="footer__made-by-text">Разработано</p>
+                <a class="footer__made-by-link" href="">
+                    <svg fill="#000000" class="footer__made-by-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60">
                     <path d="M30.2 5h-.2l-19.7 2.1v36.2l19.7 11.7 19.7-11.7v-36.2l-19.5-2.1zm17 36.8l-17.2 10.2-17.2-10.2v-14.8l17.1 10.2v1.8l-11.7-7v1.8l11.8 7.1v1.9l-11.8-7v1.8l11.8 7 11.9-7.1v-7.6l5.3-3.2v15.1zm-.1-17l-4.7 2.8-2.2
-                            1.3-10.3-6.1v1.8l8.8 5.3h-.1l-.2.1-1.3.7-7.3-4.3v1.8l5.8 3.4-1.4.9-4.3-2.6v1.8l2.9 1.7-2.9 1.7-17-10.1 17-10.2 17.2 10zm.1-1.8l-17.3-10.2-17.1 10.2v-13.6l17.2-1.8 17.2 1.8v13.6z "/>
+                            1.3-10.3-6.1v1.8l8.8 5.3h-.1l-.2.1-1.3.7-7.3-4.3v1.8l5.8 3.4-1.4.9-4.3-2.6v1.8l2.9 1.7-2.9 1.7-17-10.1 17-10.2 17.2 10zm.1-1.8l-17.3-10.2-17.1 10.2v-13.6l17.2-1.8 17.2 1.8v13.6z"/>
                   </svg>
                 </a>
             </div>
         </footer>
-        <div class="popup__box">
-            <h2 class="popup__title">Что-то пошло не так!</h2>
-            <p class="popup__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+        <div class="wrapper__popup-box">
+            <h2 class="wrapper__popup-title">Что-то пошло не так!</h2>
+            <p class="wrapper__popup-text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
             <button class="button button--popup">Ок</button>
         </div>
-        <div class="popup__box popup__box--sended">
-            <div class="popup__box--info">
-                <h2 class="popup__title">Ваш отзыв отправлен!</h2>
-                <p class="popup__text">
+        <div class="wrapper__popup-box wrapper__popup-box--sended">
+            <div class="wrapper__popup-box-info">
+                <h2 class="wrapper__popup-title">Ваш отзыв отправлен!</h2>
+                <p class="wrapper__popup-text">
                     Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.
                 </p>
             </div>
-            <div class="popup__box-dark">
+            <div class="wrapper__popup-box-dark">
                 <button class="button button--popup-close">Ок</button>
             </div>
         </div>
