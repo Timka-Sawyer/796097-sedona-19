@@ -14,8 +14,6 @@
 }
 
 .wrapper__popup-box {
-  position: fixed;
-  top: 50%;
   width: 218px;
   display: block;
   background-color: @light-color;
@@ -24,18 +22,9 @@
   box-shadow: 0 7px 15px 0 rgba(0, 1, 1, 0.15);
 
   @media (min-width: @tablet-width) {
-    position: fixed;
-    left: 50%;
-    top: 50%;
-    margin-left: -412px;
-    margin-top: -215px;
     width: 278px;
     padding: 64px 62px;
     padding-bottom: 49px;
-  }
-
-  @media (min-width: @desktop-width) {
-    margin-left: -203px;
   }
 }
 
@@ -60,18 +49,14 @@
 
 .wrapper__popup-box--sended {
   padding: 0;
-  position: fixed;
   width: 320px;
-  top: 50%;
 
   @media (min-width: @tablet-width) {
     width: 640px;
-    margin-left: -532px;
   }
 
   @media (min-width: @desktop-width) {
     width: 640px;
-    margin-left: -320px;
   }
 }
 
