@@ -14,11 +14,13 @@
 
 .video__title {
   .title-mixin();
+  font-family: @bold-font;
   padding-left: 42px;
   padding-right: 42px;
 
   @media (min-width: @tablet-width) {
     .title-mixin();
+    font-family: @bold-font;
     font-size: 30px;
   }
 
@@ -138,6 +140,7 @@
 
 .video_toggle {
   position: absolute;
+  border: none;
   margin-left: -78px;
   top: 18px;
   left: 50%;

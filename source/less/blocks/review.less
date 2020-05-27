@@ -12,6 +12,7 @@
 
 .review__title {
   .title-mixin();
+  font-family: @bold-font;
 
   @media (min-width: @tablet-width) {
     font-size: @big-fs;
@@ -168,6 +169,7 @@
 
 .review__legend {
   .title-mixin();
+  font-family: @bold-font;
   margin-left: auto;
   margin-right: auto;
   margin-top: 24px;
@@ -253,6 +255,7 @@
 
 .review__radio-label {
   .title-mixin();
+  font-family: @bold-font;
   position: relative;
   padding-left: 76px;
   text-transform: none;
@@ -274,7 +277,7 @@
   border: none;
   width: 100%;
 
-  font-family: @main-font;
+  font-family: @bold-font;
   font-size: 18px;
   line-height: 26px;
   font-weight: @font-bold;
@@ -311,6 +314,8 @@
   position: absolute;
   z-index: -1;
   opacity: 0;
+  width: 1px;
+  height: 1px;
 }
 
 .review__input--radio:focus + label::before {
@@ -354,6 +359,7 @@
 
 .review__checkbox-label {
   .title-mixin();
+  font-family: @bold-font;
   padding-left: 76px;
   position: relative;
   text-transform: none;
@@ -363,6 +369,8 @@
   position: absolute;
   z-index: -1;
   opacity: 0;
+  width: 1px;
+  height: 1px;
 }
 
 .review__input--checkbox:focus + label::before {
