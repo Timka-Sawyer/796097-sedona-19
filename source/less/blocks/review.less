@@ -144,9 +144,14 @@
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 0;
+  flex-direction: column;
 
-  @media (max-width: 767px) {
+  @media (min-width: @tablet-width) {
+    display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 71px;
+    margin-bottom: 34px;
   }
 }
 
